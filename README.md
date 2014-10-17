@@ -12,6 +12,10 @@ ICIMS.setup do |config|
   config.username    = ENV['ICIMS_API_USER']
   config.password    = ENV['ICIMS_API_PASS']
   config.customer_id = ENV['ICIMS_API_CUSTOMER']
+
+  # Value for job.postedto to fetch approved job offers only
+  # You may want to include more than one portal. This number changes from one implementation to another.
+  config.portal_ids  = ['1']
 end
 ```
 

@@ -29,7 +29,7 @@ module ICIMS
           },
           {
             name: "job.postedto",
-            value: ['3'],
+            value: ICIMS.portal_ids,
             operator: "="
           }
         ])
