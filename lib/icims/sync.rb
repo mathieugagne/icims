@@ -5,7 +5,7 @@ module ICIMS
       JobOffer.update_all(approved: false)
       icims_records.each do |icims_record|
         job_offer = JobOffer.where(icims_id: icims_record.id).first_or_initialize
-        parsed_icims_record = JobOfferParser.new(icims_record)
+        parsed_icims_record = JobParser.new(icims_record)
         %w(title category locations hire_type description approved).each do |attribute|
           job_offer.send("#{attribute}=", parsed_icims_record.send(attribute))
         end
