@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe ICIMS::JobParser do
 
@@ -11,7 +11,7 @@ RSpec.describe ICIMS::JobParser do
 
   before :each do
     @job = ICIMS::Job.find('1023')
-    @parser = ICIMS::JobOfferParser.new(@job)
+    @parser = ICIMS::JobParser.new(@job)
   end
 
   it 'parses title' do
