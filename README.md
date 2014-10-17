@@ -2,6 +2,8 @@
 
 Simple wrapper around iCIMS API to avoid technicalities around their workflow.
 
+Read more on iCIMS API here: [http://developer.icims.com/REST-API/Object-Types-Commands/Search-API](http://developer.icims.com/REST-API/Object-Types-Commands/Search-API)
+
 ## Getting Started
 
 Create an initializer file to setup iCIMS credentials. I suggest using DotEnv to keep it secret.
