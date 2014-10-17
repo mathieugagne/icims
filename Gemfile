@@ -12,3 +12,11 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+
+group :test do
+  gem "rspec"
+  gem "rspec-nc"
+  gem "pry"
+  gem "pry-debugger"
+  gem "webmock"
+end
