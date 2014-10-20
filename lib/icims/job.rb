@@ -4,9 +4,9 @@ module ICIMS
 
   class Job < OpenStruct
 
-    class << self
+    DEFAULT_FIELDS = %w(id folder jobtitle positioncategory positiontype joblocation additionallocations overview)
 
-      DEFAULT_FIELDS = %w(id folder jobtitle positioncategory positiontype joblocation additionallocations overview responsibilities)
+    class << self
 
       def find job_id, fields: []
         fields = DEFAULT_FIELDS unless fields.any?
