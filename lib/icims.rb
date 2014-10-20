@@ -2,8 +2,6 @@ require 'icims/requestable'
 require 'icims/get_request'
 require 'icims/search_request'
 require 'icims/job'
-require 'icims/job_parser'
-require 'icims/sync'
 
 module ICIMS
   require 'net/https'
