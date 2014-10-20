@@ -17,6 +17,11 @@ describe ICIMS::Job do
       expect(job.jobtitle).to eq "Senior Software Engineer - Infrastructure Software Services"
     end
 
+    it 'finds many jobs' do
+      jobs = ICIMS::Job.find([123, 1234])
+      expect(jobs).to be_a Array
+    end
+
     it 'allows additional fields' do
       job = ICIMS::Job.find(123, fields: [:id, :jobtitle, :positioncategory, :positiontype, :overview])
       expect(job).to be_a ICIMS::Job
@@ -41,7 +46,6 @@ describe ICIMS::Job do
       jobs = ICIMS::Job.approved
       expect(jobs).to be_a Array
       expect(jobs.first).to be_a ICIMS::Job
-      expect(jobs.length).to eq 3
     end
 
   end
