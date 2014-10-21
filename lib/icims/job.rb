@@ -23,13 +23,13 @@ module ICIMS
         fetch_records(ids, fields)
       end
 
-      def approved portal_ids=[]
+      def approved portal_ids: [], fields: []
         portal_ids = ICIMS.portal_ids unless portal_ids.any?
         portal_ids.map do |id|
           search([
             { name: "job.folder",   value: ['D31001'], operator: "=" },
             { name: "job.postedto", value: [id],       operator: "=" }
-          ])
+          ], fields)
         end.flatten
       end
 
