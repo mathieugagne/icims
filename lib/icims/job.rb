@@ -4,7 +4,7 @@ module ICIMS
 
   class Job < OpenStruct
 
-    DEFAULT_FIELDS = %w(id folder jobtitle positioncategory positiontype joblocation additionallocations overview)
+    DEFAULT_FIELDS = %w(id updateddate folder jobtitle positioncategory positiontype joblocation additionallocations overview)
 
     class << self
 
