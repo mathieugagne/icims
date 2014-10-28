@@ -35,4 +35,9 @@ describe ICIMS do
     expect(ICIMS.portal_ids).to eq [3]
   end
 
+  it 'logs to a different file' do
+    expect(ICIMS).to respond_to(:logger)
+    expect(ICIMS.logger).to be_a Logger
+  end
+
 end
