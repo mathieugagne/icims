@@ -9,10 +9,10 @@ module ICIMS
 
     def call
       request = get_request_object
-      Rails.logger.info "#{request.method} #{uri.to_s}" if defined?(Rails)
+      ICIMS.logger.info "#{request.method} #{uri.to_s}"
       response = ssl_connection.request(request)
       parsed_response = JSON.parse(response.body)
-      Rails.logger.info parsed_response if defined?(Rails)
+      ICIMS.logger.info parsed_response
       parsed_response
     end
 

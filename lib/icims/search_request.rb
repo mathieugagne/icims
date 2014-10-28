@@ -9,10 +9,12 @@ module ICIMS
     end
 
     def call
-      Rails.logger.info "POST #{@url} #{@body}" if defined?(Rails)
+      ICIMS.logger.info "POST #{@url} #{@body}"
       response = post_request
-      Rails.logger.info response if defined?(Rails)
-      raise Net::HTTPBadResponse, response['errors'] if response['errors'].present?
+      ICIMS.logger.info response
+      if response['errors'].present?
+        raise Net::HTTPBadResponse, response['errors']
+      end
       response
     end
 

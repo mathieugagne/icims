@@ -20,4 +20,11 @@ module ICIMS
     yield self
   end
 
+  def self.logger
+    @logger ||= begin
+      log_file = defined?(Rails) ? [Rails.root, 'log', 'icims.log'].join('/') : 'icims.log'
+      Logger.new(log_file)
+    end
+  end
+
 end
