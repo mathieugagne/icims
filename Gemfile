@@ -15,6 +15,5 @@ gemspec
 
 group :test do
   gem "rspec"
-  gem "rspec-nc"
   gem "webmock"
 end
