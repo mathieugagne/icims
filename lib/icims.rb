@@ -15,6 +15,7 @@ module ICIMS
   mattr_accessor :password
   mattr_accessor :customer_id
   mattr_accessor :portal_ids
+  mattr_accessor :base_url
 
   def self.setup
     yield self

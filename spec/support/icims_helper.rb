@@ -13,6 +13,7 @@ module ICIMSHelper
     ICIMS.password = 'Foo'
     ICIMS.customer_id = '1460'
     ICIMS.portal_ids = ['1']
+    ICIMS.base_url = "https://api.icims.com/customers/"
   end
 
 end

@@ -8,17 +8,25 @@ Read more on iCIMS API here: [http://developer.icims.com/REST-API/Object-Types-C
 
 Create an initializer file to setup iCIMS credentials. I suggest using DotEnv to keep it secret.
 
-```
+```ruby
 # config/initializers/icims.rb
 ICIMS.setup do |config|
   config.username    = ENV['ICIMS_API_USER']
   config.password    = ENV['ICIMS_API_PASS']
   config.customer_id = ENV['ICIMS_API_CUSTOMER']
+  config.customer_id = ENV['ICIMS_BASE_URL']
+
 
   # Value for job.postedto to fetch approved job offers only
   # You may want to include more than one portal. This number changes from one implementation to another.
   config.portal_ids  = ['1']
 end
+```
+
+The `BASE_URL` is most likely the following:
+
+```ruby
+ICIMS_BASE_URL='https://api.icims.com/customers/'         # production and sandbox
 ```
 
 ## Usage
