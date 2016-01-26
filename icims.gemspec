@@ -8,17 +8,15 @@ Gem::Specification.new do |s|
   s.name        = "icims"
   s.version     = Icims::VERSION
   s.authors     = ["Mathieu Gagné"]
-  s.email       = ["mgagne@vigilantglobal.com"]
-  s.homepage    = ""
+  s.email       = ["gagne.mathieu@hotmail.com"]
+  s.homepage    = "https://github.com/mathieugagne/icims"
   s.summary     = "iCIMS API Integration"
   s.description = "Ruby library for API requests with iCIMS Applicant Tracking System"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency 'httparty'
-  s.add_dependency 'activesupport'
+  s.add_dependency 'httparty', '~> 0.13'
+  s.add_dependency 'activesupport', '~> 4.1'
 
-  s.add_development_dependency "pry"
-  s.add_development_dependency "pry-debugger"
 end

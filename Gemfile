@@ -14,6 +14,8 @@ gemspec
 # gem 'debugger'
 
 group :test do
+  gem 'pry'
+  gem 'pry-byebug'
   gem "rspec"
   gem "rspec-nc"
   gem "webmock"
